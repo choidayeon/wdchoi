@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+		#main_header{height:60px;background:#82b4b3;border-bottom:1px solid gray;padding-left:15px;
+			line-height:60px;color:white;background:url(../../images/testimg.jpg);}
+		#main_header>h1{font-family: 'Cookie', cursive;font-size:280%;}
+
+		#main_gnb{border-bottom:1px solid gray;background:#c1e5df;}
+		#main_gnb:after{content:"";display:block;clear:both;}
+		#main_gnb>ul.left{float:left;}
+		#main_gnb>ul.left:after{content:"";display:block;clear:both;}
+		#main_gnb>ul>li{float:left;}
+		#main_gnb>ul>li>a{display:block;padding:10px 15px;font-weight:bold;color:#82b4b3;}
+		#main_gnb>ul>li>a:hover{background:#f7715d;color:white;}
+		#main_gnb>ul.right{float:right;}
