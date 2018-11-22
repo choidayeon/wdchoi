@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>INTERIOR</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<style>
+		/*#main_wrap{width:100%;height:100vh;overflow:hidden;position:relative;}*/
+		.carousel-inner img{width:100%;background-position:center top;}
+		nav.head_bar{background:rgba(0,0,0,0.6);transition-duration:.6s;}
+		.nav-item>a.color{color:#fff;}
+		.image01{position:relative;}
+		.xbtn{position:absolute;left:100px;top:100px; animation-name: example;transition-duration:5s; animation-iteration-count: infinite;}
+		@keyframes example{
+			from{left:100px}
+			to{left:50px}
+		}
+	</style>
+	<script>
+		$(function(){
+			var menu = $(".header").offset().top+100;
+
+			$(window).on("scroll",function(){
+				var scrollY = window.pageYOffset;
+				if(scrollY>menu){
+					$("nav").addClass("head_bar");
+					$(".nav-link").css("color","#fff");
+				}else{
+					$("nav").removeClass("head_bar");
+					$(".nav-link").css("color","#000");
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="header">
+		<nav class="navbar navbar-expand-md navbar-light fixed-top">
+			<div class="container">
+				<a href="#" class="navbar-brand">logo</a>
+				<button class="navbar-toggler" data-toggle="collapse" data-target="#tmenu">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="tmenu">
+					<ul class="nav navbar-nav ml-auto">
+						<li class="nav-item">
+							<a href="#" class="nav-link">Home</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li class="nav-item">
+							<a href="#" class="nav-link">menu01</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li class="nav-item">
+							<a href="#" class="nav-link">menu02</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li class="nav-item">
+							<a href="#" class="nav-link">menu03</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div id="main_wrap" class="carousel slide" data-ride="carousel">
+		<ul class="carousel-indicators">
+			<li data-target="#main_wrap" data-slide-to="0"></li>
+			<li data-target="#main_wrap" data-slide-to="1"></li>
+			<li data-target="#main_wrap" data-slide-to="2"></li>
+		</ul>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<img src="./images/banner01.jpg" alt="first slide">
+			</div>
+			<div class="carousel-item">
+				<img src="./images/banner02.jpg" alt="second slide">
+			</div>
+			<div class="carousel-item">
+				<img src="./images/banner03.jpg" alt="three slide">
+			</div>
+			<a href="#main_wrap" class="carousel-control-prev" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+			<a href="#main_wrap" class="carousel-control-next" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+		</div>
+	</div>
+	<div class="image01">
+	</div>
+	<img src="./images/banner03.jpg" alt="ban">
+	<img src="./images/banner03.jpg" alt="ban">
+	<div  class="xbtn">
+		<img src="./images/close_btn.gif" alt="ani">
+	</div>
+</body>
+</html>
