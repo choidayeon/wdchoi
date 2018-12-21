@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>create element</title>
+</head>
+<body>
+	<script>
+		function add(name,age){
+			var header = document.createElement('h3');
+			var textNode = document.createTextNode('내 이름은 '+ name + '이고, 나이는 ' + age + "세 입니다.");
+			header.appendChild(textNode);
+			document.body.appendChild(header);
+		}
+		function imgAdd(imgName){
+			var img = document.createElement('img');
+			img.src = "../images/" + imgName;
+			img.width = "300";
+			img.height = "276";
+			document.body.appendChild(img);
+		}
+		function del(){
+			var bodyEl = document.getElementsByTagName('body')[0]
+			bodyEl.removeChild(bodyEl.lastChild);
+		}
+		function imgUp(){
+			// document.getElementsByTagName('img')[0].width+=500;
+			// document.getElementsByTagName('img').item(0).width=500;
+
+			var imgTag = document.getElementsByTagName('img');
+			var imgTagLength = imgTag.length;
+
+			for(var i=0;i<imgTagLength;i++){
+				imgTag[i].width += 100;
+				imgTag[i].height += 100;
+			}
+		}
+		function imgDown(){
+			var imgTag = document.getElementsByTagName('img');
+			var imgTagLength = imgTag.length;
+
+			for(var i=0;i<imgTagLength;i++){
+				imgTag[i].width -= 100;
+				imgTag[i].height -= 100;
+			}
+		}
+
+	</script>
+	<a href="#" onclick="add('홍길동',19)">당신의 이름은 무엇입니까?</a><br>
+	<a href="#" onclick="add('최다연',20)">당신의 이름은 무엇입니까?</a><br>
+	<a href="#" onclick="imgAdd('testimg.jpg')">이미지 등록</a><br>
+	<a href="#" onclick="imgAdd('bus.jpg')">이미지 등록</a><br>
+	<a href="#" onclick="imgUp()">+</a><br>
+	<a href="#" onclick="imgDown()">-</a><br>
+	<a href="#" onclick="del()">삭제</a><br>
+</body>
+</html>

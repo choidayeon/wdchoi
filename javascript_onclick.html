@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>javascript array</title>
+	<style>
+		#box{width:100px;height:100px;background:none;}
+	</style>
+</head>
+<body>
+	<div id="box">지역</div>
+
+	<button type="button" onclick="onSeoul(0)">서울</button>
+	<button type="button" onclick="onSeoul(1)">부산</button>
+	<button type="button" onclick="onSeoul(2)">인천</button>
+	<script>
+		var color=["#000","#f0f","#00f"];
+		var fontColor=["#fff","#000","#f0f"];
+		var backImg=["../images/w01.jpg","../images/w02.jpg","../images/w03.jpg"]
+
+		function onSeoul(i){
+			// document.getElementById('box').style.background=color[i];
+			// document.getElementById('box').style.color=fontColor[i];
+			var x = document.getElementById('box')
+			
+			x.style.background=color[i];
+			x.style.color=fontColor[i];
+
+			document.getElementsByTagName('body')[0].style.background = "url(" + backImg[i] + ")";
+		}
+	</script>
+
+	<!-- <script>
+		var color=["#000","#f0f","#00f"]
+		function onSeoul(i){
+			document.getElementById('box').innerHTML=city[0];
+		}
+		function onBusan(){
+			document.getElementById('box').innerHTML=city[1];
+		}
+		function onIncheon(){
+			document.getElementById('box').innerHTML=city[2];
+		}
+	</script> -->
+
+<!-- 	<button type="button" onclick="printArr()">city</button>
+	<script>
+		var city=["Seoul","Busan","Incheon"];
+		function printArr(){
+			for(var i=0;i<city.length;i++){
+				document.write("배열테이터 [" + i + "] = " + city[i] + "<br>")
+			}	
+		}
+
+		// printArr();
+	</script> -->
+</body>
+</html>

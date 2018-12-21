@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+</head>
+<body>
+	<form action="join.php" method="post">
+		<fieldset>
+			<legend>회원가입</legend>
+			<p><label for="id">아이디</label><input type="text" name="id" size="8" maxlength="8" id="id"></p>
+			<p>비밀번호: <input type="password" name="pwd" size="8" maxlength="8"></p>
+			<p>메일수신여부: <input type="radio" value="y" name="receive" checked>예 <input type="radio" value="name" name="receive">아니요</p>
+			<p>관심분야: <input type="checkbox" value="HTML" name="chk1">HTML
+				<input type="checkbox" value="CSS" name="chk2">CSS
+				<input type="checkbox" value="Javascript" name="chk3">Javascript
+			</p>
+			<input type="submit">
+		</fieldset>	
+		
+		<fieldset>
+			<legend>여러 줄 글상자와 목록상자</legend>
+			<p>답글</p>
+			 <textarea name="reply" cols="30" rows="3"></textarea>
+			<p>과목선택
+				<select name="study">
+					<option value="html5">html5</option>
+					<option value="css">css</option>
+					<option value="javascript">javascript</option>
+					<option value="jquery">jquery</option>
+				</select>
+			</p>
+			<p>스터디지역
+				<select name="reg">
+					<optgroup label="관악구">
+						<option value="gwandak-bcd">봉천동</option>
+						<option value="gwandak-sld">신림동</option>
+						<option value="gwandak-nhd">남현동</option>
+					</optgroup>
+					<optgroup label="동대문구">
+						<option value="ddm-jnd">전농동</option>
+						<option value="ddm-dsn">답십리</option>
+						<option value="ddm-ssd">신설동</option>
+					</optgroup>
+				</select>
+			</p>
+		</fieldset>
+		<fieldset>
+			<legend>신상명세서</legend>
+			<p><label for="name">이름</label><input type="text" id="name"></p>
+			<p><label for="jumin">주민번호</label> <input type="text" id="jumin"> - <input type="text"></p>
+		</fieldset>
+	</form>
+</body>
+</html>

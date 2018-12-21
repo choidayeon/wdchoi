@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<style>
+		.wrap{width:500px;height:500px;margin:0 auto;position:relative;}
+
+		img{width:100%;height:100%;animation-name:top;animation-duration:2s;position:absolute;} 
+		@keyframes top{
+			from{width:0;height:0;left:250px;top:250px;}
+			to{transform:rotate(360deg);left:0;top:0;}
+		}
+		.line01,.line02,.line03,.line04{animation-duration:2s;animation-fill-mode:forwards;animation-timing-function:linear;background:black;position:absolute;}
+
+		.line01{height:10px;animation-name:line01;animation-delay:2s;}
+		@keyframes line01{
+			from{width:0;}to{width:500px;}
+		}
+		.line02{width:10px;animation-name:line02;animation-delay:4s;right:0;}
+		@keyframes line02{
+			from{height:0px;}to{height:500px;}
+		}
+		.line03{height:10px;animation-name:line03;animation-delay:6s;top:490px;}
+		@keyframes line03{
+			from{width:0;left:500px;}to{width:500px;left:0;}
+		}
+		.line04{width:10px;animation-name:line04;animation-delay:8s;left:0;}
+		@keyframes line04{
+			from{height:0;top:490px;}to{height:500px;top:0;}
+		}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<img src="../images/testimg.jpg" alt="">
+	<div class="line01"></div>
+	<div class="line02"></div>
+	<div class="line03"></div>
+	<div class="line04"></div>
+</div>
+</body>
+</html>

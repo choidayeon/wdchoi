@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">				
+	<title>mobile html</title>
+	<style>
+		*{margin:0;padding:0;}
+		ul,li{list-style:none;}
+		a{text-decoration:none;}
+		a:link,a:visited{color:black;}
+		img{display:block;}
+
+		#main_header{height:45px;background:url(../images/header_background.png);text-align:center;position:relative;}
+		#main_header h1{color:white;}
+		#main_header>a{display:block;height:32px;position:absolute;width:62px;left:5px;top:5px;background:url(../images/sprites.png);background-position:0 0;text-indent:-99999px;}
+		#main_header>label{display:block;height:32px;position:absolute;width:32px;right:5px;top:7px;background:url(../images/sprites.png);background-position:-62px 0;text-indent:-99999px;}
+		
+		#toggle_gnb_wrap{background:#363636;padding:15px;}
+		#toggle_gnb{background:white;padding:5px;}
+		#toggle_gnb>ul:after{content:"";display:block;clear:both;}
+		#toggle_gnb>ul>li{float:left;width:80px;}
+		#toggle_gnb>ul>li>a{display:block;text-align:center;line-height:25px;}
+
+		#toggle{display:none;}
+		/*#toggle + */#wrap>#toggle_gnb_wrap{display:none;}
+		#toggle:checked + #wrap>#toggle_gnb_wrap{display:block;}
+
+		#top_gnb{background:#d42111;border-bottom:1px solid black;}
+		#top_gnb:after{content:"";display:block;clear:both;}
+		#top_gnb>div{float:left;width:25%;}
+		#top_gnb>div>a{display:block;line-height:35px;text-align:center;color:white;}
+
+		#bottom_gnb{width:100%;display:table;border-bottom:1px solid black;}
+		#bottom_gnb>div{display:table-cell;position:relative;}
+		#bottom_gnb>div>a{display:block;line-height:35px;text-align:center;}
+
+		#bottom_gnb>div>a:before{content:"";border-left:1px solid black;width:1px;height:15px;position:absolute;top:10px;left:-1px;}
+
+		#main_section{padding:10px;}
+		#section_header{padding:20px;}
+		#section_article{padding:10px;}
+		#section_article>p{text-align:justify;}
+
+		#main_footer{padding:10px;border-top:3px solid black;text-align:center;}
+
+	</style>
+</head>
+<body>
+	<input type="checkbox" id="toggle">
+	<div id="wrap">
+		<header id="main_header">
+			<a href="#" class="left">main</a>
+			<h1>MOBILE</h1>
+			<label for="toggle" class="right" onclick="">Toggle</label>
+		</header>
+		<div id="toggle_gnb_wrap">
+			<div id="toggle_gnb">
+				<ul>
+					<li><a href="#">버튼</a></li>
+					<li><a href="#">버튼</a></li>
+					<li><a href="#">버튼</a></li>
+					<li><a href="#">버튼</a></li>
+					<li><a href="#">버튼</a></li>
+					<li><a href="#">버튼</a></li>
+					<li><a href="#">버튼</a></li>
+					<li><a href="#">버튼</a></li>
+				</ul>
+			</div>
+		</div>
+		<nav id="top_gnb">
+			<div><a href="#">버튼</a></div>
+			<div><a href="#">버튼</a></div>
+			<div><a href="#">버튼</a></div>
+			<div><a href="#">버튼</a></div>
+		</nav>
+		<nav id="bottom_gnb">
+			<div><a href="#">버튼</a></div>
+			<div><a href="#">버튼</a></div>
+			<div><a href="#">버튼</a></div>
+			<div><a href="#">버튼</a></div>
+			<div><a href="#">버튼</a></div>
+		</nav>
+		<section id="main_section">
+			<header id="section_header">
+				<h1>Lorem ipsum.</h1>
+				<time>2018-08-02-birthday</time>
+			</header>
+			<article id="section_article">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing e
+				lit. Minus cumque iure voluptatibus qui. Excepturi voluptates dolor, omnis quos laudantium sint expedita id doloribus soluta doloremque delectus error possimus qui eos cumque reiciendis accusantium, velit fuga, recusandae atque deleniti mollitia. Eveniet dicta maxime dolorem quos non iste omnis, laudantium natus hic molestias incidunt aliquid animi, vel commodi odio repellat! Harum ipsam dolores, hic delectus earum saepe explicabo ducimus. Deserunt doloremque asperiores quis est, sed natus exercitationem, dignissimos repellat sunt ullam ipsam alias eligendi recusandae eum eos suscipit aperiam nulla. Doloremque culpa, ipsum sint blanditiis eligendi quod nisi? Ab non, minima quos.</p><br>
+				<p>Rerum sequi nulla, vitae minus consequatur nesciunt provident tenetur consequuntur quasi autem explicabo et natus eos vero perferendis enim voluptatem, possimus facere delectus assumenda, non nostrum facilis magni! Laudantium vitae voluptatibus nulla ipsum consequuntur eligendi saepe, consectetur neque a possimus quisquam quas expedita reiciendis exercitationem aperiam unde facere ullam harum eum, perferendis illum laborum, eius repellendus optio! Provident, odit, recusandae. Ad culpa rerum, aut quod voluptatum eveniet obcaecati autem veritatis magnam ducimus, nobis omnis tenetur quos reprehenderit nostrum voluptate consequatur iste neque quia impedit. Enim molestias quas, voluptatibus atque! Ut error, repudiandae dignissimos ad officiis unde autem nostrum laboriosam. Laudantium.</p><br>
+				<p>Neque ut dolorem aspernatur quo tenetur alias numquam veritatis asperiores, porro quia rem eligendi architecto earum quibusdam molestiae, ipsum vitae culpa aliquam debitis repudiandae, blanditiis. Sed blanditiis non quasi, enim repudiandae dignissimos illo! Tenetur cupiditate ut sequi praesentium ipsam, optio quasi distinctio. Tempora quaerat nulla officiis, quos iste ut debitis dolore sit fugiat omnis quia excepturi voluptatum accusamus repellendus in quo id expedita aliquam perferendis ad, consequatur earum qui adipisci recusandae libero. Repellat maiores iusto fuga. At, quam incidunt sit eos repellat quaerat animi vero omnis. Quas quibusdam perferendis amet sequi accusantium ab quae quaerat, expedita a, sunt pariatur ipsum?</p>
+			</article>
+		</section>
+		<footer id="main_footer">
+			<h3>Lorem ipsum dolor.</h3>
+			<address>website layout basic</address>
+		</footer>
+	</div>
+</body>
+</html>

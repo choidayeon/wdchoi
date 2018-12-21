@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<style>
+		#container{width:500px;margin:50px auto;font-size:12px;}
+		ul.tab{}
+		ul.tab:after{content:"";display:block;clear:both;}
+		ul.tab>li{float:left;background:#e9eff8;border-radius:10px 10px 0 0;}
+		ul.tab>li>a{display:block;width:100px;line-height:40px;text-align:center;}
+		ul.tab>li.select{background:#c1d2f2;cursor:pointer;font-weight:bold;}
+		#container div{border:1px solid #9fb7d4;padding:20px;}
+	</style>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			$("#container div").hide();
+			$("#container div").eq(0).show();
+			$('ul.tab li:eq(0)').addClass("select");
+
+			$("ul.tab li").click(function(){
+				$("ul.tab li, ul.tab a").removeClass();
+				$(this).addClass('select');
+				$("#container div").hide();
+				$("#container div").eq($(this).index()).show();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<ul class="tab">
+			<li><a href="#" class="select">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+		<div>1.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus hic quidem ad accusamus sapiente. Ea voluptates est expedita quae, distinctio id cum eaque, neque rem ut rerum magni modi natus!</div>
+		<div>2.In at incidunt explicabo, cum quod porro recusandae quas nisi officia quibusdam, sapiente debitis delectus molestias hic, odio quam temporibus repellendus! Laborum, itaque. Illo impedit saepe, suscipit molestiae facilis tempore.</div>
+		<div>3.Eveniet, similique obcaecati atque velit provident repellat illo debitis expedita ex dolore officiis minima sit corporis recusandae, animi ratione possimus vitae distinctio error mollitia quibusdam. Nobis explicabo dolorem atque reprehenderit.</div>
+		<div>4.Aliquam porro, cupiditate labore accusantium aut magni nostrum. Maiores quas sapiente esse minima quos, quidem nostrum earum consectetur temporibus illo a est, deleniti nemo modi nihil, dolorem provident deserunt dolorum!</div>
+		<div>5.Recusandae corporis voluptatibus pariatur non, iste tempora impedit facere ullam animi nulla voluptatem dolore nam officia soluta alias perspiciatis minima, facilis, architecto dolor! Aliquid, quam. Nemo nam quisquam corrupti cumque.</div>
+	</div>
+</body>
+</html>

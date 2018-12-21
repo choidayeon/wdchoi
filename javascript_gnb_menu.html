@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>submenu</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<style>
+		a:link,a:visited{color:white;}
+		.navbar{background:#333;position:relative;}
+		.subnav a{display:block;font-size:16px;padding:14px 16px;}
+		.subnav:hover{background:#f00;}
+		.navbar>li:last-child{position:absolute;display:none;right:0;top:0;}
+
+		@media only screen and (min-width:1001px){
+			.navbar:after{content:"";display:block;clear:both;}
+			.subnav{float:left;transition:0.5s;}
+			.subnav-content{display:none;transition:0.5s;}
+			/*.navbar>li:nth-child(2) .subnav-content{display:block;}*/
+			.subnav-content{_width:100%;position:absolute;_left:0;_background:#f00;}
+			.subnav-content:after{contnet:"";display:block;clear:both;}
+			.subnav-content>li{float:left;}
+
+			.subnav:hover .subnav-content,
+			.subnav:hover .back{display:block;}
+			.back{width:100%;height:50px;background:#f00;position:absolute;left:0;display:none;}
+		}
+
+		@media only screen and (max-width:1000px){
+			.navbar>li:last-child{display:block;}
+			.subnav-content{display:none;}
+			.navbar>li~li a{text-align:center;}
+			.fa-caret-down{display:none;}
+			.myLinks{display:none;}
+		}
+	</style>
+	<script>
+		window.addEventListener("resize",winFunction);
+
+		function winFunction(){
+			var x = document.getElementsByClassName("myLinks");
+
+			if(window.innerWidth>1000){
+			    for(var i=0;i<x.length;i++){
+			    	x[i].style.display="block";
+			    }
+			}else{
+				for(var i=0;i<x.length;i++){
+			    	x[i].style.display="none";
+				}
+			}
+		}
+
+		function myFunction(){
+			var x = document.getElementsByClassName("myLinks");
+			for(var i=0;i<x.length;i++){
+				if(x[i].style.display==="block"){
+					x[i].style.display="none";
+				}else{
+					x[i].style.display="block";
+					// x[0].style.display="block";
+					// x[1].style.display="block";
+					// x[2].style.display="block";
+				}
+			}
+		}	
+	</script>
+</head>
+<body>
+	<ul class="navbar">
+		<li class="subnav"><a href="#" class="subnavbtn">home</a></li>
+		<li class="subnav myLinks"><a href="#" class="subnavbtn">menu01 <i class="fas fa-caret-down"></i></a>
+			<div class="back"></div>
+			<ul class="subnav-content" style="left:0">
+				<li><a href="#">menu01_01</a></li>
+				<li><a href="#">menu01_02</a></li>
+				<li><a href="#">menu01_03</a></li>
+			</ul>
+		</li>
+		<li class="subnav myLinks"><a href="#" class="subnavbtn">menu02 <i class="fas fa-caret-down"></i></a>
+			<div class="back"></div>
+			<ul class="subnav-content" style="left:60px">
+				<li><a href="#">menu02_01</a></li>
+				<li><a href="#">menu02_02</a></li>
+				<li><a href="#">menu02_03</a></li>
+			</ul>
+		</li>
+		<li class="subnav myLinks"><a href="#" class="subnavbtn">menu03 <i class="fas fa-caret-down"></i></a>
+			<div class="back"></div>
+			<ul class="subnav-content" style="left:160px">
+				<li><a href="#">menu03_01</a></li>
+				<li><a href="#">menu03_02</a></li>
+				<li><a href="#">menu03_03</a></li>
+			</ul>
+		</li>
+		<li class="subnav">
+			<a href="javascript:void(0)" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</li>
+	</ul>
+	
+</body>
+</html>

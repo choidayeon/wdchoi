@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="./css/reset.css">
+	<style>
+		#nav{width:1000px;margin:100px auto 20px;}
+		#nav>ul{}
+		#nav>ul:after{content:"";display:block;clear:both;}
+		#nav>ul>li{float:left;background:#ccc;}
+		#nav>ul>li>a{display:block;width:200px;text-align:center;line-height:40px;}
+		#nav>ul>li.on{background:#33ccff;}
+		#nav div{width:1000px;border:5px solid #ccc;padding:30px;margin:20px 0;}
+	</style>
+	<script>
+		// $(function(){
+		// 	// $("#nav li").on("mouseover",function(){
+		// 	// 	$("#nav li").removeClass("on");
+		// 	// 	$(this).addClass("on");
+		// 	// });
+		// 	// $("#nav li").on("mouseout",function(){
+		// 	// 	$("#nav li").removeClass("on");
+		// 	// });
+
+		// 	$("#nav li").on({
+		// 		mouseover:function(){
+		// 			$("#nav li").removeClass();
+		// 			$(this).addClass("on");
+		// 		},
+		// 		mouseout:function(){
+		// 			$("#nav li").removeClass();
+		// 		},
+		// 		click:function(e){
+		// 			e.preventDefault();
+		// 		});
+		// 	});
+
+		// });
+
+		$(function(){
+			$("#nav li").eq(0).addClass("on");
+			$("#nav div").hide().eq(0).show();
+
+			$("#nav li").on("click",function(e){
+				e.preventDefault();
+				$("#nav li").removeClass();
+				$(this).addClass("on");
+				$("#nav div").hide().eq($(this).index()).show();
+			});
+		})
+	</script>
+</head>
+<body>
+	<div id="nav">
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+		<div>1.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam corporis veritatis praesentium officiis ducimus, eius aut aliquam in, magni voluptas neque magnam ipsa, voluptate iure beatae dicta provident nemo perspiciatis.</div>
+		<div>2.Dolor impedit nam ad fuga optio placeat at quaerat veniam excepturi est reprehenderit deleniti quisquam, officia nihil vel dolorum veritatis, doloribus incidunt. Alias, ex commodi odio consequatur ullam tenetur sunt.</div>
+		<div>3.Laboriosam quam dolores consequatur quaerat quasi voluptates molestias fugiat illo cum, quo est provident doloribus quibusdam voluptatem explicabo? Enim dolore eos ad, iste magni perferendis blanditiis laudantium asperiores iusto officia.</div>
+		<div>4.Similique ratione quisquam cum dicta temporibus labore voluptatum sequi culpa, illo quas eum nesciunt sint aut nobis reiciendis aliquid fugiat eos sapiente ipsa voluptate ducimus aperiam non incidunt quod facere.</div>
+		<div>5.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse rerum consequuntur natus maxime, provident omnis, quas doloremque sed asperiores perspiciatis, quasi ipsam ratione iste, quidem accusamus eaque itaque nisi. Odit!</div>
+	</div>
+	
+	</div>
+</body>
+</html>

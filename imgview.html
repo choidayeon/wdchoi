@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>image view</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<style>
+		.box{width:200px;height:200px;background:url(./images/fruit.jpg) no-repeat 0 200%;border-radius:50%;border:10px solid olive;_box-shadow:7px 7px 15px gray;box-sizing:border-box;cursor:pointer;transition:0.6s;}
+		.box:hover{border:10px solid black;box-shadow:10px 10px 40px gray;background:url(./images/fruit.jpg) no-repeat;}
+	</style>
+	<script>
+		function linkClick(){
+			location.href="http://www.naver.com";
+		}
+	</script>
+</head>
+<body>
+	<div class="box" onclick="linkClick()"></div>	
+	<div class="box" onclick="location.href='http://www.naver.com'"></div>
+</body>
+</html>

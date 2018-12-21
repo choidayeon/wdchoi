@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		function nameId(){
+			var eleBox = document.getElementById('box');
+			var eleBody = document.getElementsByTagName('body');
+			eleBox.innerHTML = "어서오세요";
+			eleBox.style.background = "orange";
+			eleBody[0].style.background = "url(./images/w01.jpg)";
+		}
+		function clearId(){
+			var eleBox = document.getElementById('box');
+			var eleBody = document.getElementsByTagName('body');
+			eleBox.innerHTML = "안녕하세요";
+			eleBox.style.background = "skyblue";
+			eleBody[0].style.background = "none";
+		}
+	</script>
+	<style>
+		#box{width:200px;height:200px;background:skyblue;text-align:center;line-height:200px;}
+	</style>
+</head>
+<body>
+	<div id="box">안녕하세요</div>
+	<button type="button" onclick='nameId()'>함수호출1</button>
+	<button type="button" onclick='clearId()'>초기화</button>
+</body>
+</html>

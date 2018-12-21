@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		*{margin:0;padding:0;}
+		ul,li{list-style:none;}
+		a{text-decoration:none;}
+		a:link,a:visited{color:black;}
+
+		#container{width:500px;margin:20px auto;position:relative;}
+		#container ul div{display:none;width:500px;height:100px;padding:30px;background:blue;box-sizing:border-box;position:absolute;color:white;left:0;}
+
+		#container>ul:after{content:"";display:block;clear:both;width:100%;}
+		#container>ul>li{float:left;width:20%;border-right:1px solid #000;box-sizing:border-box;}
+		#container>ul>li:last-child{border:none;}
+		#container>ul>li>a{display:block;height:25px;background:lightgray;text-align:center;line-height:25px;}
+		#container>ul>li>a:hover{background:#000;color:#fff;}
+		#view{width:500px;height:100px;padding:30px;background:skyblue;box-sizing:border-box;}
+
+		#container li:nth-child(1):hover div{display:block;}
+		#container li:nth-child(2):hover div{display:block;}
+		#container li:nth-child(3):hover div{display:block;}
+		#container li:nth-child(4):hover div{display:block;}
+		#container li:nth-child(5):hover div{display:block;}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<ul>
+			<li><a href="#">menu1</a>
+				<div class="view1">1Lorem ipsum dolor sit amet.</div></li>
+			<li><a href="#">menu2</a>
+				<div class="view2">2Lorem ipsum dolor sit amet.</div></li>
+			<li><a href="#">menu3</a>
+				<div class="view3">3Lorem ipsum dolor sit amet.</div></li>
+			<li><a href="#">menu4</a>
+				<div class="view4">4Lorem ipsum dolor sit amet.</div></li>
+			<li><a href="#">menu5</a>
+				<div class="view5">5Lorem ipsum dolor sit amet.</div></li>
+		</ul>
+		<div id="view">안녕하세요</div>
+	</div>
+</body>
+</html>
